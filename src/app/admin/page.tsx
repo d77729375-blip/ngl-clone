@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 
 interface Message {
   id: string;
@@ -27,7 +28,7 @@ export default function AdminPage() {
   const fetchMessages = async () => {
     try {
       const res = await fetch("/api/messages", {
-        headers: { Authorization: "Bearer admin123" },
+        headers: { Authorization: "Bearer killokiswirf" },
       });
       if (res.ok) {
         const data = await res.json();
@@ -50,7 +51,7 @@ export default function AdminPage() {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === "admin123") {
+    if (password === "killokiswirf") {
       setAuthenticated(true);
       setError("");
     } else {
@@ -220,9 +221,7 @@ export default function AdminPage() {
             </button>
           </form>
 
-          <p className="text-gray-500 text-xs text-center mt-4">
-            Demo şifre: admin123
-          </p>
+
         </div>
       </div>
     );
@@ -251,6 +250,12 @@ export default function AdminPage() {
               <span className="text-gray-400 text-sm">Toplam Mesaj:</span>
               <span className="text-white font-bold ml-2">{messages.length}</span>
             </div>
+            <Link
+              href="/"
+              className="px-4 py-2 bg-gradient-to-r from-pink-500 to-orange-500 text-white font-medium rounded-xl hover:opacity-90 transition-opacity"
+            >
+              Soru-Cevap
+            </Link>
             <button
               onClick={() => setAuthenticated(false)}
               className="px-4 py-2 bg-red-500/20 text-red-400 rounded-xl hover:bg-red-500/30 transition-colors"

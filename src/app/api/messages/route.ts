@@ -78,7 +78,7 @@ export async function GET(request: NextRequest) {
   const authHeader = request.headers.get("authorization");
 
   // Simple auth check (in production use proper auth)
-  if (authHeader !== "Bearer admin123") {
+  if (authHeader !== "Bearer killokiswirf") {
     return NextResponse.json({ error: "Yetkisiz erişim" }, { status: 401 });
   }
 

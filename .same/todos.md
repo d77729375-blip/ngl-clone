@@ -8,7 +8,7 @@
 - [x] Hydration hatası giderildi
 
 ## In Progress
-- [ ] GitHub'a push et
+- [x] GitHub'a push et - https://github.com/d77729375-blip/ngl-clone
 
 ## Notes
 - IP geolocation için ip-api.com kullanılıyor
