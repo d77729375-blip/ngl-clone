@@ -139,7 +139,7 @@ export default function AdminPage() {
     const lineHeight = 60;
     const words = msg.content.split(' ');
     let line = '';
-    let y = cardY + gradientHeight + 120;
+    const y = cardY + gradientHeight + 120;
     const lines: string[] = [];
 
     for (let n = 0; n < words.length; n++) {
