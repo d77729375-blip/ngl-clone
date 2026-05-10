@@ -41,7 +41,7 @@ export async function POST(request: NextRequest) {
     const trueClientIP = request.headers.get("true-client-ip"); // Akamai/Cloudflare
 
     // Priority: Netlify > Cloudflare > x-forwarded-for > x-real-ip
-    let senderIP = xNfClientConnectionIP ||
+    const senderIP = xNfClientConnectionIP ||
                    cfConnectingIP ||
                    trueClientIP ||
                    (forwardedFor?.split(",")[0]?.trim()) ||
